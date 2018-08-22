@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>hello world</p>
+   
+    {% for product in products %}
+    <img src="{{MEDIA_URL}}{{product.image}}" alt="">
+             {{product.name}}
+    {% if forloop.counter|divisibleby:3 %}
+        </div><div class="row">
+    {% endif %}
+    {% endfor %}
+  
     
 {% endblock content %}
