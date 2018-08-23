@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="product-img" src="{{MEDIA_URL}}{{product.image}}" alt="Image of cheese">
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <h2>{{product.name}}</h2>
+                <p>{{product.description}}</p>
+            </div>
+
+            <div class="row">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Price per kilo</strong></td>
+                            <td>€ {{product.price}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Milk type</strong></td>
+                            <td>{{product.milk_type}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Milk sanitation</strong></td>
+                            <td> {{product.milk_sanitation}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fat content</strong></td>
+                            <td> {{product.fat_content}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ripening</strong></td>
+                            <td> {{product.ripening}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <p><a href="#" class="btn btn-primary" role="button">Add to cart</a> <a href="{% url 'products_list'%}" class="btn btn-default" role="button">Back</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

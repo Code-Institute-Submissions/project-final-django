@@ -6,8 +6,17 @@
 
 
 /*-----------------------------------------------------------------------show-products-page*/
+.show-products-card {
+    min-height: 400px;
+}
 
 .show-products-card-img {
     max-height: 150px;
     object-fit: cover;
+}
+
+/*-----------------------------------------------------------------------product-details-page*/
+.product-img {
+    object-fit: cover;
+    max-width: 100%;
 }

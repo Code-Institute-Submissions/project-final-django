@@ -1,18 +1,18 @@
 {% extends "base.html" %} {% block content %} {% for product in products %}
 
-<div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="thumbnail">
+<div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="thumbnail show-products-card">
         <img class="show-products-card-img"src="{{MEDIA_URL}}{{product.image}}" alt="Image of cheese">
         <div class="caption">
-            <h4>{{product.name}}</h4>
-            <p>{{product.description}}</p>
+            <h5>{{product.name}}</h5>
+            <p>{{product.description|truncatewords:16}}</p>
             <p>€ {{product.price}}</p>
-            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="{% url 'product_details' product.id %}" class="btn btn-default" role="button">More information</a></p>
         </div>
     </div>
 </div>
 
-{% if forloop.counter|divisibleby:3 %}
+{% if forloop.counter|divisibleby:4 %}
 </div>
 <div class="row">
     {% endif %} {% endfor %} {% endblock content %}
