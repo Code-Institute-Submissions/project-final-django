@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load bootstrap_tags %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <h2>Login</h2>
+            </div>
+            <div class="row">
+                <form method="post">
+                    {% csrf_token %} {{ form | as_bootstrap }}
+
+                    <p><a href="#">Forgot my password</a></p>
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
