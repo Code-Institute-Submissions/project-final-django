@@ -1,21 +1,30 @@
 /*-----------------------------------------------------------------------background-colors*/
 
-
 /*-----------------------------------------------------------------------special paddings, margins*/
+
+.section-wrapper-position {
+    padding-top: 20px;
+}
 
 
 
 /*-----------------------------------------------------------------------show-products-page*/
+
 .show-products-card {
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .show-products-card-img {
-    max-height: 150px;
+    max-width: 100%;
     object-fit: cover;
+    display: block;
+    height: 150px;
+    padding-left: 50px;
 }
 
+
 /*-----------------------------------------------------------------------product-details-page*/
+
 .product-img {
     object-fit: cover;
     max-width: 100%;
