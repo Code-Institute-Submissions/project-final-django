@@ -13,31 +13,32 @@
             </div>
 
             <div class="row">
-                <table>
+                <table class="table table-hover">
                     <tbody>
                         <tr>
-                            <td><strong>Price per kilo</strong></td>
+                            <th scope="row"><strong>Price per kilo</strong></th>
                             <td>€ {{product.price}}</td>
                         </tr>
                         <tr>
-                            <td><strong>Milk type</strong></td>
+                            <th scope="row"><strong>Milk type</strong></th>
                             <td>{{product.milk_type}}</td>
                         </tr>
                         <tr>
-                            <td><strong>Milk sanitation</strong></td>
+                            <th scope="row"><strong>Milk sanitation</strong></th>
                             <td> {{product.milk_sanitation}}</td>
                         </tr>
                         <tr>
-                            <td><strong>Fat content</strong></td>
+                            <th scope="row"><strong>Fat content</strong></th>
                             <td> {{product.fat_content}}</td>
                         </tr>
                         <tr>
-                            <td><strong>Ripening</strong></td>
+                            <th scope="row"><strong>Ripening</strong></th>
                             <td> {{product.ripening}}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
             <div class="row">
                 <p><a href="#" class="btn btn-success" role="button">Add to cart</a> <a href="{% url 'products_list'%}" class="btn btn-default" role="button">Back</a></p>
             </div>

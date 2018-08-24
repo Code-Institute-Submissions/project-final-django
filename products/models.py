@@ -2,6 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+CATEGORY = [
+    ['Farmhouse cheese', 'farmhouse'], 
+    ['Herb cheese', 'herbs'],
+    ['Our brand', 'our brand'],
+    ['Specialties', 'specialties']] 
+
 MILK_TYPE = [
     ['Cow', 'cow'], 
     ['Goat', 'goat'],
@@ -30,6 +36,7 @@ RIPENING = [
     
 class Product(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
+    category = models.CharField(max_length=16, choices=CATEGORY, default='Farmhouse cheese', blank=False, null=False)
     description = models.TextField(max_length=400, default="Enter description")
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='product_images', default='generic_product.png')
@@ -37,6 +44,7 @@ class Product(models.Model):
     milk_sanitation = models.CharField(max_length=12, choices=MILK_SANITATION, default="Raw milk", blank=False, null=False)
     fat_content = models.CharField(max_length=4, choices=FAT_CONTENT, default="48+", blank=False, null=False)
     ripening = models.CharField(max_length=16, choices=RIPENING, default="2-14+ months", blank=False, null=False)
+    
   
 
     def __str__(self):
