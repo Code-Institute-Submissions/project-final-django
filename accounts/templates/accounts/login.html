@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% load bootstrap_tags %} {% block content %}
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
@@ -9,14 +10,13 @@
                 <form method="post">
                     {% csrf_token %} {{ form | as_bootstrap }}
 
-                    <p><a href="#">Forgot my password</a></p>
+                    <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
 
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-
-{% endblock %}
+        {% endblock %}

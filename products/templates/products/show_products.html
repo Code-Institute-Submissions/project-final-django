@@ -1,29 +1,43 @@
-{% extends "base.html" %} {% block content %} {% load static from staticfiles %} {% for product in products %}
+{% extends "base.html" %} {% block content %}
 
-<div class="col-lg-4 col-sm-6 col-12">
-    <div class="bs-component">
-        <div class="card border-success mb-3">
-            <div class="card-header">{{product.category}}</div>
-            <img class="show-products-card-img" src='{{MEDIA_URL}}{{product.image}}' alt="Card image">
-            <div class="card-body">
-                <h4 class="card-title">{{product.name}}</h4>
-                <p class="card-text">{{product.description | truncatewords:15}}</p>
-                <form action="">
-                    <div class="row">
-                        <div class="form-group col-4">
-                            <input type="number" class="form-control" placeholder="1" id="inputDefault">
-                        </div>
-                        <div class="col-4">
-                            <button type="button" class="btn btn-success">Add to cart</button>
-                        </div>
-                        <div class="col-4">
-                            <a href="{% url 'product_details' product.id%}" class="btn btn-primary float-right" role="button"><span><i class="info-icon fas fa-info-circle"></i></span></a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+<div class="row">
+    <div class="bs-component product-list-badges-all text-center">
+        <a href="#" class=""><span class="badge badge-warning product-list-badges">Show all</span></a>
+        <a href="#" class=""><span class="badge badge-warning product-list-badges">Our brands</span></a>
+        <a href="#" class=""><span class="badge badge-warning product-list-badges">Farmhouse cheese</span></a>
+        <a href="#" class=""><span class="badge badge-warning product-list-badges">Specialties</span></a>
+        <a href="#" class=""><span class="badge badge-warning product-list-badges">Herb cheese</span></a>
     </div>
 </div>
 
-{% endfor %} {% endblock content %}
+<div class="row">
+    {% for product in products %}
+    <div class="col-lg-4 col-sm-6 col-12">
+        <div class="bs-component">
+            <div class="card border-success mb-3">
+                <div class="card-header">{{product.category}}</div>
+                <img class="show-products-card-img" src='{{MEDIA_URL}}{{product.image}}' alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">{{product.name}}</h4>
+                    <p class="card-text">{{product.description | truncatechars:115}}</p>
+                    <form action="">
+                        <div class="row">
+                            <div class="form-group col-4">
+                                <input type="number" class="form-control" placeholder="1" id="inputDefault">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">Add to cart</button>
+                            </div>
+                            <div class="col-4">
+                                <a href="{% url 'product_details' product.id%}" class="btn btn-primary float-right" role="button"><span><i class="info-icon fas fa-info-circle"></i></span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

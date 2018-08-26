@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'products',
     'accounts', 
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SYSTEM_EMAIL = 'admin@example.com'

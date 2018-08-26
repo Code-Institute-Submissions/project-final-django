@@ -17,14 +17,18 @@ from django.contrib import admin
 from django.urls import path, include
 from products import urls as products_urls
 from accounts import urls as accounts_urls
+from home import urls as home_urls
 from django.views.static import serve
 from django.conf import settings
+from home.views import show_home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', show_home, name="show_home"), 
     
     path('products/', include(products_urls)),
     path('accounts/', include(accounts_urls)),
+    path('home/', include(home_urls)),
     
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

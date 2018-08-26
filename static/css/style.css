@@ -6,9 +6,24 @@
     padding-top: 20px;
 }
 
+.add-to-cart-number-input {
+    display: inline-block;
+    max-width: 80px;
+}
+
 
 
 /*-----------------------------------------------------------------------show-products-page*/
+.product-list-badges-all {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.product-list-badges {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
 
 .show-products-card {
     min-height: 300px;
