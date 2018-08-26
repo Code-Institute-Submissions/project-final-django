@@ -51,7 +51,7 @@
                             <label class="badge badge-pill badge-secondary">{{ number_of_items_in_cart }}</label></a>
                         </li>
                         <li class="nav-item">
-                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">{% if user.is_authenticated %}<a class="btn btn-primary" href="{% url 'logout' %}"><i class="fas fa-user-tie"></i> Logout</a>{%else%}<a href="{% url 'login' %}" class="btn btn-primary" role="button"><span><i class="fas fa-user-tie"></i>  Login</span></a>{% endif %}
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">{% if user.is_authenticated %}<a class="btn btn-primary" href="{% url 'logout' %}"><i class="fas fa-user-tie"></i> Logout</a>{%else%}<a href="{% url 'login' %}" class="btn btn-primary" role="button"><span><i class="fas fa-user-tie"></i>  Login</span></a>{%endif %}
                                 <div class="btn-group" role="group">
                                     <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: -100px; will-change: transform;">
@@ -67,6 +67,14 @@
             </div>
         </div>
     </nav>
+
+    {% if messages %}{% for message in messages %}
+    <div class="alert alert-dismissible alert-secondary">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h6>{{message}}</h6>
+    </div>
+    {% endfor %}
+    {% endif %}
 
     <div class="container section-wrapper-position">
         {% block content %} {% endblock %}
