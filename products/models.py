@@ -33,7 +33,14 @@ RIPENING = [
     ['14+ months', '14+ months'], 
     ['2-12 months', '2-12 months'],
     ['2-14+ months', '2-14+ months']]
+
+class Weight(models.Model):
+    kg = models.IntegerField(blank=False, null=False)
     
+    def __str__(self):
+        return "{0} kg".format(self.kg)    
+    
+
 class Product(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
     category = models.CharField(max_length=16, choices=CATEGORY, default='Farmhouse cheese', blank=False, null=False)
@@ -44,8 +51,8 @@ class Product(models.Model):
     milk_sanitation = models.CharField(max_length=12, choices=MILK_SANITATION, default="Raw milk", blank=False, null=False)
     fat_content = models.CharField(max_length=4, choices=FAT_CONTENT, default="48+", blank=False, null=False)
     ripening = models.CharField(max_length=16, choices=RIPENING, default="2-14+ months", blank=False, null=False)
-    
-  
+    available_weights = models.ManyToManyField(Weight)
 
     def __str__(self):
-        return self.name
+        return self.name    
+

@@ -1,5 +1,56 @@
 {% extends "base.html" %} {% block content %}
 
+<div class="background-img-wrapper">
+</div>
+<div class="welcome-section text-center">
+    <div class="row">
+        <img class="logo-welcome-section" src="../../../static/images/producent-logo.png" alt='Logo producent'>
+    </div>
+    <h1 class="welcome-section-title">Specialist supplier of <br/>Dutch farmhouse cheese</h1>
+    <svg height="2" width="35%">
+         <line x1="0" y1="0" x2="300" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+    </svg>
+    <div class="row">
+        <div class="col-12">
+            <p class="welcome-section-text">The Producent is a cooperation of cheese farmers with its warehouse in Gouda, the Netherlands. Ever since 1915 the Producent is a leading player in the cheese market. We are proud on our wide <a href={% url 'products_list'%}>product range</a>                that has the finest cheeses of the world, including traditional Dutch farmhouse cheeses made in accordance with its authentic recipe. <br/>We you share our passion for cheese </p>
+        </div>
+    </div>
+</div>
 
+<hr>
+<div class="row">
+    <div class="col-sm-6 col-xs-12">
+        <img class="home-section-img" src="../../../static/images/tartufo-truffel.png" alt="truffle cheese">
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <h2>Our Brands</h2>
+        <h6>De Producent proudly presents its own high quality Dutch Farmhouse Cheese brands, enriched with the best ingredients selected worldwide.</h6>
+        <p>Try for example the Tartufo, a top quality, intense truffle cheese with lots of flavor. Our impressive product range also includes tasty colorful pesto cheeses and delicious unique Dutch Farmhouse cheese with an Asian touch. These cheeses are
+            available in our ‘Kaazië’ product line. In short, De Producent has a unique range of traditionally produced high quality cheese that must be tasted to discover their true quality. Follow our website to keep up to date, we are constantly developing
+            new types of cheese!</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 order-sm-12">
+        <img class="home-section-img" src="../../../static/images/private-label.png" alt="truffle cheese">
+    </div>
+    <div class="col-xs-12 col-sm-6 order-sm-1">
+        <h2>Private label</h2>
+        <h6>Delicious Dutch Farmhouse Cheese with your own private label</h6>
+        <p>A request for a product with a private label starts with a meeting with one of our sales managers. Our sales managers are able to give you detailed information about stocks and production possibilities. It is very important that De Producent is informed of any special needs early in the process (special ingredients, quality marks or product properties). If the requested product is not in stock or if it concerns a specific recipe, the cheeses are produced specially for you. De Producent can also manage artwork, from concept/idea to the printing of the labels. For this purpose, De Producent works with prominent designers with many years of experience in the dairy sector. The types of cheese listed below can be provided with your own private label.</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-6 col-xs-12">
+        <img class="home-section-img" src="../../../static/images/innovation.png" alt="truffle cheese">
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <h2>Innovation and quality</h2>
+        <h6>De Producent maintains high quality standards and alwasy strives for innovation</h6>
+        <p>De Producent is a modern and flexible organization with an open and innovative vision of the domestic and global markets. Our Research and Development Department follows continuously market trends and develops innovative new recipes for A-brands and private labels. The traditional process, passion and expertise of the farmers are the ingredients for our flavorful quality cheese products. We control the quality of our products with a HACCP Quality and Food Safety System. Quality control starts at the farm. We support our farmers in working hygienically and managing the traceability of raw materials and end products. In addition, the milk’s quality is analysed weekly. Our Quality Control department inspects the cheese after production, during maturation and when leaving the warehouse. Our products are regularly analyzed on food safety, microbiological quality and chemical proportions. The modern digital traceability system secures the tracking and tracing of our ingredients and cheese products.</p>
+    </div>
+</div>
 
 {% endblock %}

@@ -8,28 +8,68 @@
 
 .add-to-cart-input-field {
     width: 40%;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .add-to-cart-button {
     margin-bottom: 8px;
 }
 
+/*-----------------------------------------------------------------------*/
 
+/*                            STYLING PER PAGE*/
 
+/*-----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------navbar*/
+
 .navbar-shopping-cart-padding {
     padding-right: 20px;
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
 }
+
 .navbar-shopping-cart-padding>a {
     text-decoration: none;
 }
 
 
+/*-----------------------------------------------------------------------home*/
+
+.background-img-wrapper {
+    background-image: url('../images/cows-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 85vh;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.welcome-section {
+    margin: 0 auto;
+    margin-top: -350px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    border-radius: 5px;
+}
+
+
+.logo-welcome-section {
+    margin: 0 auto;
+    margin-top: 20px;
+    max-height: 50px;
+    width: auto;
+}
+
+.home-section-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
 
 /*-----------------------------------------------------------------------show-products-page*/
+
 .product-list-badges-all {
     margin: 0 auto;
     margin-bottom: 20px;
@@ -70,11 +110,34 @@
 }
 
 /*-----------------------------------------------------------------------*/
+
 /*                            MEDIA QUERIES*/
+
 /*-----------------------------------------------------------------------*/
 
 @media screen and (min-width: 992px) {
-.navbar-shopping-cart-padding {
-    padding-bottom: 0px
-}
+    .navbar-shopping-cart-padding {
+        padding-bottom: 0px
+    }
+
+    .welcome-section {
+        margin-top: -260px;
+        width: 60%;
+    }
+
+    .logo-welcome-section {
+        margin: 0 auto;
+        margin-top: -40px;
+        width: 50%;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .welcome-section-title {
+        margin-top: -80px;
+    }
+
+    .welcome-section-text {
+        margin: 20px 50px 20px 50px;
+    }
 }
