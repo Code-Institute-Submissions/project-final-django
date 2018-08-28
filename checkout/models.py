@@ -20,6 +20,7 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False, related_name="orders", on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
     weight = models.IntegerField(blank=False)
+    # add timestamp
     
     def __str__(self):
         return "{0} {1} @ {2}".format(self.quantity, self.product.name, self.product.price)
