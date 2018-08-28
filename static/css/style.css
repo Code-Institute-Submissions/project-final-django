@@ -13,7 +13,7 @@
 
 .add-to-cart-kg-input {
     display: inline-block;
-    max-width: 40%;
+    max-width: 30%;
     margin-bottom: 8px;
 }
 
@@ -98,11 +98,17 @@
     height: 150px;
     padding-left: 50px;
 }
-
+.card-text {
+    margin-bottom: 5px;
+}
 .info-icon {
     font-size: 20px;
 }
 
+.product-card-form {
+    margin-top: 15px;
+    margin-bottom: 0px; 
+}
 
 
 

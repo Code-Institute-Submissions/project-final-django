@@ -16,7 +16,7 @@ def add_to_cart(request):
     print(weight)
 
     cart = request.session.get('cart', {})
-    cart[product_id] = cart.get(product_id, 0) + quantity
+    cart["{0}-{1}".format(product_id, weight)] = {'quantity': cart.get(product_id, 0) + quantity, 'weight': weight}
     
     request.session['cart'] = cart
     print(cart)
