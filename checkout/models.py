@@ -1,5 +1,6 @@
 from django.db import models
 from products.models import Product
+from django.contrib.auth.models import User
 from django.utils import timezone
 
 class Order(models.Model):
@@ -20,6 +21,7 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False, related_name="orders", on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
     weight = models.IntegerField(blank=False)
+    user = models.ForeignKey(User, related_name='orders', null=False, on_delete=models.PROTECT)
     # add timestamp
     
     def __str__(self):
