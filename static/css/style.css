@@ -4,6 +4,7 @@
 
 .section-wrapper-position {
     padding-top: 20px;
+    min-height: 90vh;
 }
 
 .add-to-cart-input-field {
@@ -21,6 +22,10 @@
     margin-bottom: 8px;
 }
 
+.footer-border-margin {
+    margin-top: 20px;
+}
+
 /*-----------------------------------------------------------------------*/
 
 /*                            STYLING PER PAGE*/
@@ -36,6 +41,38 @@
 
 .navbar-shopping-cart-padding>a {
     text-decoration: none;
+}
+
+
+/*-----------------------------------------------------------------------footer*/
+footer {
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.links {
+    list-style-type: none;
+}
+
+.social-icons-list>a {
+    text-decoration: none; 
+}
+
+.social-media-icon-youtube {
+    color: #ff0000;
+    margin: 10px 10px 10px 10px;
+}
+.social-media-icon-linkedin {
+    color: #4875B4;
+    margin: 10px 10px 10px 10px;
+}
+.social-media-icon-facebook {
+    color: #3b5998;
+    margin: 10px 10px 10px 10px;
+}
+.social-media-icon-twitter {
+    color: #33CCFF;
+    margin: 10px 10px 10px 10px;
 }
 
 

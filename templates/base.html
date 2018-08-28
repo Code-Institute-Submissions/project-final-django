@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,7 +52,7 @@
                             <label class="badge badge-pill badge-secondary">{{ number_of_items_in_cart }}</label></a>
                         </li>
                         <li class="nav-item">
-                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">{% if user.is_authenticated %}<a class="btn btn-primary" href="{% url 'logout' %}"><i class="fas fa-user-tie"></i> Logout</a>{%else%}<a href="{% url 'login' %}" class="btn btn-primary" role="button"><span><i class="fas fa-user-tie"></i>  Login</span></a>{%endif %}
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">{% if user.is_authenticated %}<a class="btn btn-primary" href="{% url 'logout' %}"><i class="fas fa-user-tie"></i> Logout</a>{%else%}<a href="{% url 'login' %}" class="btn btn-primary" role="button"><span><i class="fas fa-user-tie"></i>  Login</span></a>{%endif%}
                                 <div class="btn-group" role="group">
                                     <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: -100px; will-change: transform;">
@@ -73,12 +74,69 @@
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <h6>{{message}}</h6>
     </div>
-    {% endfor %}
-    {% endif %}
+    {% endfor %} {% endif %}
 
     <div class="container section-wrapper-position">
         {% block content %} {% endblock %}
     </div>
+
+
+    <div class="container">
+        <footer class="footer-section">
+            <div class="row footer-border-margin">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="container">
+                        <h5>Links</h5>
+                        <ul>
+                            <li class="links"><a href="#">Contact</a></li>
+                            <li class="links"><a href="#">Vacancies</a></li>
+                            <li class="links"><a href="#">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="container">
+                        <div class="row">
+                            <h5>Our social</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 social-icons-list">
+                                <a href=""><i class="fa-4x fab fa-youtube social-media-icon-youtube"></i></a>
+                            </div>
+                            <div class="col-xs-12 social-icons-list">
+                                <a href=""><i class="fa-4x fab fa-linkedin social-media-icon-linkedin"></i></a>
+                            </div>
+                            <div class="col-xs-12 social-icons-list">
+                                <a href=""><i class="fa-4x fab fa-facebook-square social-media-icon-facebook"></i></a>
+                            </div>
+                            <div class="col-xs-12 social-icons-list">
+                                <a href=""><i class="fa-4x fab fa-twitter-square social-media-icon-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="container">
+                        <form>
+                            <fieldset>
+                                <h5>Subscribe for our newsletter</h5>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">First name</label>
+                                    <input type="text" class="form-control" maxlength="20" placeholder="Enter first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
 
     {% block head_js %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

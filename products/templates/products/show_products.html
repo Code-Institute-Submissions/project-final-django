@@ -20,7 +20,7 @@
                 <img class="show-products-card-img" src='{{MEDIA_URL}}{{product.image}}' alt="Card image">
                 <div class="card-body">
                     <h4 class="card-title">{{product.name}}</h4>
-                    <h6 class="pull-right">€{{product.price}}</h6>
+                    <h6 class="pull-right">€{{product.price}} per kg</h6>
                     <p class="card-text">{{product.description | truncatechars:115}}</p>
                     <a href="{% url 'product_details' product.id%}" class="card-link"><i class="info-icon fas fa-info-circle"></i></span> More information</a>
 
