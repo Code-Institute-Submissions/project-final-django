@@ -30,12 +30,12 @@
             <td><img height="80" src="{{MEDIA_URL}}{{item.product.image}}"/></td>    
             <td>{{ item.product.name }}</td>    
             <td>{{ item.quantity}}</td>    
-            <td>weight</td>
+            <td>{{ item.weight}} kg</td>
             <td>€{{ item.product.price }}</td>
             <td>€{{ item.total}}</td>
             <td><form method="post" action="{%url 'remove_item'%}">
                 {% csrf_token %}
-                <input type="hidden" name="id" value="{{item.product.id}}"/>
+                <input type="hidden" name="id" value="{{item.product.id}}-{{item.weight}}"/>
                 <input type="submit" class="btn btn-danger" value="Remove"/>
                 </form>
             </td>

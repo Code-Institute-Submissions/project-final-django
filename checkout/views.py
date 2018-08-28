@@ -26,12 +26,14 @@ def confirm_checkout(request):
         order = order_form.save()
         
         cart = request.session.get('cart', {})
+        print(cart)
         
-        for product, quantity in cart.items():
+        for order_id, basket in cart.items():
             line_item = OrderLineItem(
                 order=order,
-                product_id = product,
-                quantity = quantity
+                product_id = basket['id'],
+                quantity = basket['quantity'], 
+                weight = basket['weight'],
                 )
             line_item.save()
         
