@@ -11,6 +11,12 @@
     display: inline-block;
 }
 
+.add-to-cart-kg-input {
+    display: inline-block;
+    max-width: 40%;
+    margin-bottom: 8px;
+}
+
 .add-to-cart-button {
     margin-bottom: 8px;
 }
@@ -97,10 +103,9 @@
     font-size: 20px;
 }
 
-.add-to-cart-number-input {
-    display: inline-block;
-    max-width: 80px;
-}
+
+
+
 
 /*-----------------------------------------------------------------------product-details-page*/
 

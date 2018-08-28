@@ -11,6 +11,9 @@ def show_cart(request):
 def add_to_cart(request):
     product_id = request.POST['id']
     quantity = int(request.POST['quantity'])
+    weight = int(request.POST['weight'])
+    print('---------------------------------------------------')
+    print(weight)
 
     cart = request.session.get('cart', {})
     cart[product_id] = cart.get(product_id, 0) + quantity

@@ -9,8 +9,9 @@
         <tr>
             <th></th>    
             <th>Product</th>    
-            <th>Quantity</th>    
-            <th>Price</th>
+            <th>Quantity</th> 
+            <th>Weight</th>
+            <th>€/kg</th>
             <th>Total</th> 
             <th></th>
         </tr>
@@ -20,7 +21,8 @@
         <tr>
             <td><img height="80" src="{{MEDIA_URL}}{{item.product.image}}"/></td>    
             <td>{{ item.product.name }}</td>    
-            <td>{{ item.quantity}}</td>    
+            <td>{{ item.quantity}}</td>
+            <td>Weight</td>
             <td>€{{ item.product.price }}</td>
             <td>€{{ item.total}}</td>
             <td><form method="post" action="{%url 'remove_item'%}">
@@ -33,6 +35,7 @@
         {% endfor %}
 
         <tr>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
