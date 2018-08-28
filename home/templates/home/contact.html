@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <form class="email-form">
+            <h6>Contact form</h6>
+            <fieldset>
+                <div class="form-group">
+                    <input type="text" maxlength="40" class="form-control" id="name" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="How can we help you?"></textarea>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="row contact-page">
+    <div class="col-sm-6">
+        <h6>Contact details</h6>
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th scope="row"><strong>Address</strong></th>
+                    <td>Handelsvereniging “De Producent” B.A.<br/> Kattensingel 62-69<br/> 2801 CC Gouda</td>
+                </tr>
+                <tr>
+                    <th scope="row"><strong>Phone</strong></th>
+                    <td>+31 182 513366</td>
+                </tr>
+                <tr>
+                    <th scope="row"><strong>Email</strong></th>
+                    <td>info@deproducent.nl</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="map" class="col-sm-6">
+    </div>
+</div>
+
+
+{% endblock %}

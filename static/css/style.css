@@ -7,6 +7,9 @@
     min-height: 90vh;
 }
 
+.contact-page {
+    margin-top: 40px;
+}
 .add-to-cart-input-field {
     width: 40%;
     display: inline-block;
@@ -26,6 +29,10 @@
     margin-top: 20px;
 }
 
+.email-form {
+    margin: 0 auto;
+    width: 100%;
+}
 /*-----------------------------------------------------------------------*/
 
 /*                            STYLING PER PAGE*/
@@ -52,6 +59,10 @@ footer {
 
 .links {
     list-style-type: none;
+}
+
+.social-icons-list {
+    display: inline-block;
 }
 
 .social-icons-list>a {
@@ -109,7 +120,10 @@ footer {
     object-fit: cover;
 }
 
-
+/*-----------------------------------------------------------------------contact-page*/
+#map {
+    min-height: 300px;
+}
 
 /*-----------------------------------------------------------------------show-products-page*/
 
@@ -187,5 +201,9 @@ footer {
 
     .welcome-section-text {
         margin: 20px 50px 20px 50px;
+    }
+    
+    .email-form {
+        width: 80%;
     }
 }
