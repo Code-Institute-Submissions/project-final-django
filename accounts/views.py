@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .forms import ProfileRegistrationForm
+from .models import Profile
 
 # Create your views here.
 def register(request):
@@ -25,6 +27,23 @@ def register(request):
         form = UserCreationForm()
         profile_form = ProfileRegistrationForm()
     return render(request, "accounts/register.html", {'form': form, 'profile_form': profile_form})
+
+
+@login_required() 
+def show_profile(request):
+    profile = get_object_or_404(Profile, pk=request.user.profile.id)
     
-def show_profile(request): 
-    return render(request, "accounts/profile.html")
+    if request.method == "POST":
+        form = ProfileRegistrationForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            post = form.save()
+            return redirect("show_profile") 
+        else:
+            return render(request, "accounts/profile.html", {"form": form})
+    
+    else: 
+        profile_form = ProfileRegistrationForm(instance=profile)
+        return render(request, "accounts/profile.html", {'profile_form': profile_form})
+
+
+    
