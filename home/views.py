@@ -43,3 +43,6 @@ def submit_contact_form(request):
         messages.success(request, 'I have received your email & will get back to you ASAP! :)')
         
         return redirect('show_contact')
+        
+def show_about_us(request): 
+    return render(request, "home/about-us.html")
