@@ -1,9 +1,11 @@
 from django.db import models
 from products.models import Product
+from accounts.models import Profile
 from django.contrib.auth.models import User
 from django.utils import timezone
 
 class Order(models.Model):
+    profile = models.ForeignKey(Profile, related_name='orders', null=True, blank=False, on_delete=models.PROTECT)
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
@@ -21,7 +23,7 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False, related_name="orders", on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
     weight = models.IntegerField(blank=False)
-    user = models.ForeignKey(User, related_name='orders', null=False, on_delete=models.PROTECT)
+    
     # add timestamp
     
     def __str__(self):
