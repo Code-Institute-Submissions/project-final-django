@@ -6,17 +6,19 @@ from django.utils import timezone
 
 class Order(models.Model):
     profile = models.ForeignKey(Profile, related_name='orders', null=True, blank=False, on_delete=models.PROTECT)
-    full_name = models.CharField(max_length=50, blank=False)
+    first_name = models.CharField(max_length=50, blank=False)
+    last_name = models.CharField(max_length=50, blank=False)
+    email = models.EmailField()
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
     postcode = models.CharField(max_length=20, blank=True)
-    town_or_city = models.CharField(max_length=40, blank=False)
+    city = models.CharField(max_length=40, blank=False)
     street_address_1 = models.CharField(max_length=40, blank=False)
     street_address_2 = models.CharField(max_length=40, blank=False)
     county = models.CharField(max_length=40, blank=False)
     date = models.DateField(auto_now_add=True)
     def __str__(self):
-        return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
+        return "{0}-{1}-{2}".format(self.id, self.date, self.last_name)
         
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, related_name="line_items", on_delete=models.CASCADE)

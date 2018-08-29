@@ -17,4 +17,4 @@ class PaymentForm(forms.Form):
 class OrderForm(forms.ModelForm):
     class Meta:
         model=Order
-        exclude=['date']
+        exclude=['date', 'profile']

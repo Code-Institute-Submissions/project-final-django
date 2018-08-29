@@ -6,37 +6,36 @@
     //]]>
 </script>
 <script type="text/javascript" src="{% static 'checkout/stripe.js' %}"></script>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <h2>Cart</h2>
 
 <table class="table">
     <thead>
         <tr>
-            <th></th>    
-            <th>Product</th>    
+            <th></th>
+            <th>Product</th>
             <th>Quantity</th>
             <th>Weight</th>
             <th>€/kg</th>
-            <th>Total</th> 
+            <th>Total</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         {% for item in cart_items %}
         <tr>
-            <td><img height="80" src="{{MEDIA_URL}}{{item.product.image}}"/></td>    
-            <td>{{ item.product.name }}</td>    
-            <td>{{ item.quantity}}</td>    
+            <td><img height="80" src="{{MEDIA_URL}}{{item.product.image}}" /></td>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity}}</td>
             <td>{{ item.weight}} kg</td>
             <td>€{{ item.product.price }}</td>
             <td>€{{ item.total}}</td>
-            <td><form method="post" action="{%url 'remove_item'%}">
-                {% csrf_token %}
-                <input type="hidden" name="id" value="{{item.product.id}}-{{item.weight}}"/>
-                <input type="submit" class="btn btn-danger" value="Remove"/>
+            <td>
+                <form method="post" action="{%url 'remove_item'%}">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{item.product.id}}-{{item.weight}}" />
+                    <input type="submit" class="btn btn-danger" value="Remove" />
                 </form>
             </td>
         </tr>
@@ -54,29 +53,68 @@
     </tbody>
 </table>
 
-
-<form role="form" method="post" id="payment-form" action="{% url 'confirm_checkout' %}">
-
-    <legend>Payment Details</legend>
-
+<h2>Payment details</h2>
+<form role="form" method="POST" id="payment-form" action="{% url 'confirm_checkout' %}">
+    {% csrf_token %}
     <div id="credit-card-errors" style="display:none">
         <div class="alert-message block-message error" id="stripe-error-message"></div>
     </div>
-
-    <div class="form-group col-md-6">
-        {{ order_form|as_bootstrap }}
-    </div>
-
-    <div class="form-group col-md-6">
-        {{ payment_form|as_bootstrap }}
-    </div>
-
-    {% csrf_token %}
-    <div class="form-group col-md-12">
-        <input class="btn btn-success" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-    </div>
-
+    <fieldset>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <legend>Shipping and billing details</legend>
+                <div class="form-group">
+                    <label for="name">First name</label>
+                    <input name="first_name" type="text" class="form-control" id="name" value={{request.user.profile.first_name}}>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last name</label>
+                    <input name="last_name" type="text" class="form-control" id="last_name" value={{request.user.profile.last_name}}>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={{request.user.profile.email}}>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Phone number</label>
+                    <input name="phone_number" type="text" class="form-control" id="order_form" value={{request.user.profile.phone_number}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Country</label>
+                    <input name="country" type="text" class="form-control" id="order_form" value={{request.user.profile.country}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Postcode</label>
+                    <input name="postcode" type="text" class="form-control" id="order_form" value={{request.user.profile.postcode}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Town or city</label>
+                    <input name="city" type="text" class="form-control" id="order_form" value={{request.user.profile.city}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Street address 1</label>
+                    <input name="street_address_1" type="text" class="form-control" id="order_form" value={{request.user.profile.street_address1}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">Street address 2</label>
+                    <input name="street_address_2" type="text" class="form-control" id="order_form" value={{request.user.profile.street_address2}}>
+                </div>
+                <div class="form-group">
+                    <label for="order_form">County</label>
+                    <input name="county" type="text" class="form-control" id="order_form" value={{request.user.profile.county}}>
+                </div>
+            </div>
+            
+            <div class="form-group col-md-6">
+                <legend>Payment details</legend>
+                {{ payment_form|as_bootstrap }}
+                <div class="form-group row">
+                    <input class="btn btn-success" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                </div>
+            </div>
+        </div>
+    </fieldset>
 </form>
-
 
 {% endblock %}
