@@ -51,10 +51,8 @@
                                     <button id="btnGroupDrop2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: -100px; will-change: transform;">
                                         {% if user.is_authenticated %}
-                                        <a class="dropdown-item" href="{% url 'show_profile' %}">Profile</a>
-                                        {% else %}
-                                        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
-                                        {% endif %}
+                                        <a class="dropdown-item" href="{% url 'show_profile' %}">Profile</a> {% else %}
+                                        <a class="dropdown-item" href="{% url 'register' %}">Register</a> {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -82,11 +80,21 @@
     <footer class="container footer-section">
         <div class="row footer-border-margin text-center">
             <div class="col-sm-4 col-xs-12">
-                <h5>Links</h5>
+                <h5>Contact details</h5>
 
-                <li class="links"><a href="#">Contact</a></li>
-                <li class="links"><a href="#">Vacancies</a></li>
-                <li class="links"><a href="#">Disclaimer</a></li>
+                <div class="col-12"><span><i class="fas fa-address-card"></i></span>
+                    <span> Handelsvereniging “De Producent” B.A.<br/> Kattensingel 62-69<br/> 2801 CC Gouda</span></p>
+                </div>
+
+                <div class="col-12">
+                    <p><span><i class="fas fa-phone"></i></span>
+                        <span> +31 182 513366</span></p>
+                </div>
+
+                <div class="col-12">
+                    <p><span><i class="fas fa-at"></i></span>
+                        <span> info@deproducent.nl</span></p>
+                </div>
 
             </div>
             <div class="col-sm-4 col-xs-12">

@@ -2,9 +2,9 @@
 
 <div class="row">
     <div class="col-12">
-        <form action="{% url 'submit_contact_form'%}"class="email-form" method="POST">
+        <form action="{% url 'submit_contact_form'%}" class="email-form" method="POST">
             {% csrf_token %}
-            <h6>Contact form</h6>
+            <h6>We love to hear from you!</h6>
             <fieldset>
                 <div class="form-group">
                     <input name="contact_name" type="text" maxlength="40" class="form-control" id="name" placeholder="Enter name" required>
@@ -23,29 +23,13 @@
         </form>
     </div>
 </div>
+
 <div class="row contact-page">
-    <div class="col-sm-6">
-        <h6>Contact details</h6>
-        <table class="table table-hover">
-            <tbody>
-                <tr>
-                    <th scope="row"><strong>Address</strong></th>
-                    <td>Handelsvereniging “De Producent” B.A.<br/> Kattensingel 62-69<br/> 2801 CC Gouda</td>
-                </tr>
-                <tr>
-                    <th scope="row"><strong>Phone</strong></th>
-                    <td>+31 182 513366</td>
-                </tr>
-                <tr>
-                    <th scope="row"><strong>Email</strong></th>
-                    <td>info@deproducent.nl</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="map" class="col-sm-6">
+    <div id="map" class="col-sm-12">
     </div>
 </div>
 
 
 {% endblock %}
+
+
