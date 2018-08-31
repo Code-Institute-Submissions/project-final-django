@@ -1,10 +1,11 @@
 {% extends "base.html" %} {% block content %}
+{% load static from staticfiles %}
 
 <div class="background-img-wrapper">
 </div>
 <div class="welcome-section text-center">
     <div class="row">
-        <img class="logo-welcome-section" src="../../../static/images/producent-logo.png" alt='Logo producent'>
+        <img class="logo-welcome-section" src="{% static 'images/producent-logo.png' %}" alt='Logo producent'>
     </div>
     <h1 class="welcome-section-title">Specialist supplier of <br/>Dutch farmhouse cheese</h1>
     <svg height="2" width="35%">
@@ -20,7 +21,7 @@
 <hr>
 <div class="row">
     <div class="col-sm-6 col-xs-12">
-        <img class="home-section-img" src="../../../static/images/tartufo-truffel.png" alt="truffle cheese">
+        <img class="home-section-img" src="{% static 'images/tartufo-truffel.png' %}" alt="truffle cheese">
     </div>
     <div class="col-sm-6 col-xs-12">
         <h2>Our Brands</h2>
@@ -33,7 +34,7 @@
 <hr>
 <div class="row">
     <div class="col-xs-12 col-sm-6 order-sm-12">
-        <img class="home-section-img" src="../../../static/images/private-label.png" alt="truffle cheese">
+        <img class="home-section-img" src="{% static 'images/private-label.png' %}" alt="truffle cheese">
     </div>
     <div class="col-xs-12 col-sm-6 order-sm-1">
         <h2>Private label</h2>
@@ -44,7 +45,7 @@
 <hr>
 <div class="row">
     <div class="col-sm-6 col-xs-12">
-        <img class="home-section-img" src="../../../static/images/innovation.png" alt="truffle cheese">
+        <img class="home-section-img" src="{% static 'images/innovation.png' %}" alt="truffle cheese">
     </div>
     <div class="col-sm-6 col-xs-12">
         <h2>Innovation and quality</h2>
