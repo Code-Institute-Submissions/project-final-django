@@ -47,7 +47,7 @@ def show_profile(request):
         return render(request, "accounts/profile.html", {'profile_form': profile_form})
 
 def show_order_history(request):
-    orders = Order.objects.all().filter(profile = request.user.profile)
+    orders = Order.objects.all().filter(profile = request.user.profile).order_by('-date')
     return render(request, "accounts/orderhistory.html", {'orders': orders})
 
     

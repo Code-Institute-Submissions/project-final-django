@@ -6,11 +6,12 @@
         <h2>Login</h2>
         <form method="post">
             {% csrf_token %} {{ form | as_bootstrap }}
-
+            <p>Not yet an account? <a href="{% url 'register' %}">Register</a> here</p>
             <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
 
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
+        
     </div>
 </div>
 
