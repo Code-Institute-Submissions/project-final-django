@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    <div class="col-md-2 col-sm-12">
+        <div class="list-group">
+            <div href="#" class="list-group-item list-group-item-action active">
+                Your account
+            </div>
+            <a href="{% url 'show_order_history' %}" class="list-group-item list-group-item-action">Order history
+              </a>
+            <a href="{% url 'show_profile' %}" class="list-group-item list-group-item-action">Profile
+              </a>
+        </div>
+    </div>
+    <div class="col-md-10 col-sm-12">
+
+
+        <div class="accordion" id="accordionExample">
+            {% for order in orders%}
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{order.id}}" aria-expanded="false" aria-controls="collapseTwo">
+      <h6>{{ order.date }} - total: €{{ order.total }}</p>
+        </button>
+                    </h5>
+                </div>
+                <div id="collapse{{order.id}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Weight</th>
+                                    <th>€/kg</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for line_item in order.line_items.all %}
+                                <tr>
+
+                                    <td>{{ line_item.product.name }} </td>
+                                    <td>{{ line_item.quantity }}</td>
+                                    <td>{{ line_item.weight}} kg</td>
+                                    <td>€{{ line_item.product.price }}</td>
+                                    <td>€{{ line_item.total}}</td>
+
+                                </tr>
+                                {% endfor %}
+
+                                <tr>
+
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><strong>Total:</strong></td>
+                                    <td><strong>€{{order.total}}</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

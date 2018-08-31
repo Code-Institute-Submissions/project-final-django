@@ -59,11 +59,11 @@ def confirm_checkout(request):
             )
         
         except:
-            messages.error(request, "Error Charging Credit Card")
+            messages.error(request, "Unfortunately there was an ERROR Charging this Credit Card, please try again")
             return redirect('show_checkout')      
       
         if charge.paid:
-            messages.error(request, "You have successfully paid")
+            messages.success(request, "Thank you, you have successfully paid")
             del request.session['cart']
             return redirect("show_home")
         else:

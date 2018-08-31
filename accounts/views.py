@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileRegistrationForm
 from .models import Profile
+from checkout.models import Order
 
 # Create your views here.
 def register(request):
@@ -45,5 +46,8 @@ def show_profile(request):
         profile_form = ProfileRegistrationForm(instance=profile)
         return render(request, "accounts/profile.html", {'profile_form': profile_form})
 
+def show_order_history(request):
+    orders = Order.objects.all().filter(profile = request.user.profile)
+    return render(request, "accounts/orderhistory.html", {'orders': orders})
 
     

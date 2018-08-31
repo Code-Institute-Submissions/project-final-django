@@ -17,7 +17,9 @@
         <div class="bs-component">
             <div class="card border-success mb-3">
                 <div class="card-header">{{product.category}}</div>
-                <img class="show-products-card-img" src='{{MEDIA_URL}}{{product.image}}' alt="Card image">
+                <a href="{% url 'product_details' product.id%}" class="card-link">
+                    <img class="show-products-card-img" src='{{MEDIA_URL}}{{product.image}}' alt="Card image">
+                </a>
                 <div class="card-body">
                     <h4 class="card-title">{{product.name}}</h4>
                     <h6 class="pull-right">€{{product.price}} per kg</h6>
@@ -37,7 +39,7 @@
 
                             </form>
                         </div>
-                        
+
                     </div>
 
                 </div>

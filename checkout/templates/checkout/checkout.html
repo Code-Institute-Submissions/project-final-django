@@ -52,7 +52,7 @@
         </tr>
     </tbody>
 </table>
-
+<h1>{{request.user.profile.last_name}}</h1>
 <h2>Payment details</h2>
 <form role="form" method="POST" id="payment-form" action="{% url 'confirm_checkout' %}">
     {% csrf_token %}
@@ -65,44 +65,44 @@
                 <legend>Shipping and billing details</legend>
                 <div class="form-group">
                     <label for="name">First name</label>
-                    <input name="first_name" type="text" class="form-control" id="name" value={{request.user.profile.first_name}}>
+                    <input name="first_name" type="text" class="form-control" id="name" value="{{request.user.profile.first_name}}">
                 </div>
                 <div class="form-group">
                     <label for="last_name">Last name</label>
-                    <input name="last_name" type="text" class="form-control" id="last_name" value={{request.user.profile.last_name}}>
+                    <input name="last_name" type="text" class="form-control" id="last_name" value="{{request.user.profile.last_name}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={{request.user.profile.email}}>
+                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{request.user.profile.email}}">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label for="order_form">Phone number</label>
-                    <input name="phone_number" type="text" class="form-control" id="order_form" value={{request.user.profile.phone_number}}>
+                    <input name="phone_number" type="text" class="form-control" id="order_form" value="{{request.user.profile.phone_number}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">Country</label>
-                    <input name="country" type="text" class="form-control" id="order_form" value={{request.user.profile.country}}>
+                    <input name="country" type="text" class="form-control" id="order_form" value="{{request.user.profile.country}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">Postcode</label>
-                    <input name="postcode" type="text" class="form-control" id="order_form" value={{request.user.profile.postcode}}>
+                    <input name="postcode" type="text" class="form-control" id="order_form" value="{{request.user.profile.postcode}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">Town or city</label>
-                    <input name="city" type="text" class="form-control" id="order_form" value={{request.user.profile.city}}>
+                    <input name="city" type="text" class="form-control" id="order_form" value="{{request.user.profile.city}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">Street address 1</label>
-                    <input name="street_address_1" type="text" class="form-control" id="order_form" value={{request.user.profile.street_address1}}>
+                    <input name="street_address_1" type="text" class="form-control" id="order_form" value="{{request.user.profile.street_address1}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">Street address 2</label>
-                    <input name="street_address_2" type="text" class="form-control" id="order_form" value={{request.user.profile.street_address2}}>
+                    <input name="street_address_2" type="text" class="form-control" id="order_form" value="{{request.user.profile.street_address2}}">
                 </div>
                 <div class="form-group">
                     <label for="order_form">County</label>
-                    <input name="county" type="text" class="form-control" id="order_form" value={{request.user.profile.county}}>
+                    <input name="county" type="text" class="form-control" id="order_form" value="{{request.user.profile.county}}">
                 </div>
             </div>
             
