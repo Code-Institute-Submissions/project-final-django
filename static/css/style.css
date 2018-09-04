@@ -10,6 +10,7 @@
 .contact-page {
     margin-top: 40px;
 }
+
 .add-to-cart-input-field {
     width: 40%;
     display: inline-block;
@@ -33,6 +34,7 @@
     margin: 0 auto;
     width: 100%;
 }
+
 /*-----------------------------------------------------------------------*/
 
 /*                            STYLING PER PAGE*/
@@ -52,8 +54,9 @@
 
 
 /*-----------------------------------------------------------------------footer*/
+
 footer {
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 40px;
 }
 
@@ -66,21 +69,24 @@ footer {
 }
 
 .social-icons-list>a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .social-media-icon-youtube {
     color: #ff0000;
     margin: 10px 10px 10px 10px;
 }
+
 .social-media-icon-linkedin {
     color: #4875B4;
     margin: 10px 10px 10px 10px;
 }
+
 .social-media-icon-facebook {
     color: #3b5998;
     margin: 10px 10px 10px 10px;
 }
+
 .social-media-icon-twitter {
     color: #33CCFF;
     margin: 10px 10px 10px 10px;
@@ -90,20 +96,19 @@ footer {
 /*-----------------------------------------------------------------------home*/
 
 .background-img-wrapper {
-    background-image: url('../images/cows-3.jpg');
+    background-image: url('../images/cows-3-small.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 85vh;
+    min-height: 35vh;
     padding: 0px;
     border-radius: 5px;
 }
 
 .welcome-section {
     margin: 0 auto;
-    margin-top: -350px;
     background-color: rgba(255, 255, 255, 0.9);
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -121,8 +126,31 @@ footer {
 }
 
 /*-----------------------------------------------------------------------contact-page*/
+
+.background-img-wrapper-contact {
+    background-image: url('../images/contact-us-small.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 35vh;
+    padding: 0px;
+    border-radius: 5px;
+}
+
 #map {
     min-height: 400px;
+}
+
+/*-----------------------------------------------------------------------abouts-us-page*/
+
+.background-img-wrapper-about-us {
+    background-image: url('../images/warehouse-small.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 35vh;
+    padding: 0px;
+    border-radius: 5px;
 }
 
 /*-----------------------------------------------------------------------show-products-page*/
@@ -149,16 +177,18 @@ footer {
     height: 150px;
     padding-left: 50px;
 }
+
 .card-text {
     margin-bottom: 5px;
 }
+
 .info-icon {
     font-size: 20px;
 }
 
 .product-card-form {
     margin-top: 15px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
 }
 
 
@@ -182,9 +212,32 @@ footer {
         padding-bottom: 0px
     }
 
+    .background-img-wrapper {
+        background-image: url('../images/cows-3.jpg');
+        min-height: 85vh;
+        padding: 0px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .background-img-wrapper-contact {
+        background-image: url('../images/contact-us.jpg');
+        min-height: 85vh;
+        padding: 0px;
+        border-radius: 5px;
+    }
+    
+    .background-img-wrapper-about-us {
+        background-image: url('../images/warehouse.jpg');
+        min-height: 85vh;
+        padding: 0px;
+        border-radius: 5px;
+    }
+
     .welcome-section {
-        margin-top: -260px;
+        margin-top: -240px;
         width: 60%;
+        margin-bottom: 30px;
     }
 
     .logo-welcome-section {
@@ -202,8 +255,12 @@ footer {
     .welcome-section-text {
         margin: 20px 50px 20px 50px;
     }
-    
+
     .email-form {
         width: 80%;
+    }
+    
+    .producent-today-section {
+        margin-top: 70px;
     }
 }

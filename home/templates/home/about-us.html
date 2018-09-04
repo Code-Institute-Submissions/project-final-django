@@ -1,24 +1,43 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load static from staticfiles %}
+
+<div class="background-img-wrapper-about-us">
+</div>
+<div class="welcome-section text-center">
+    <div class="row">
+        <img class="logo-welcome-section" src="{% static 'images/producent-logo.png' %}" alt='Logo producent'>
+    </div>
+    <h1 class="welcome-section-title">About us</h1>
+    <svg height="2" width="35%">
+         <line x1="0" y1="0" x2="300" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+    </svg>
+    <div class="row">
+        <div class="col-12">
+            <p class="welcome-section-text">De Producent is proud of its history. In 2015 we celebrated the fact that we are in the cheese business for 100 years. Today, de Producent is still one of the market leaders in the farmhouse cheese market and is continuing to grow. </p>
+        </div>
+    </div>
+</div>
 
 <div class="row">
-    <div class="embed-responsive embed-responsive-16by9 col-sm-4">
+    <div class="embed-responsive embed-responsive-16by9 col-sm-8">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_ZBhfAo5Nyc" allowfullscreen></iframe>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-4">
         <h5>History</h5>
         <p>De Producent is expanding from a small-scale warehouse to an ultra-modern warehouse. The “Cheese Producers Cooperative – association for the export of full-fat Gouda Cheese with Government Quality label” later called ‘De Producent’ – was founded
             in 1915. The cooperative was established in order to create a better sales position to traders. Farmers sold their own cheese to traders who bought the cheese in line with market prices, meaning that the farmer frequently had to sell below
             cost. By establishing a cooperative, the farmers received a purchase guarantee and fixed compensation for the cheeses.</p>
-            <p>Over one hundred years later, De Producent still offers purchasing guarantees and stands for the responsible purchase of
-            the cheese produced by its farmers. Within the Cooperative, De Producent has a large number of farmers who produce cheese under the strict quality control of De Producent. As a result, De Producent can always supply a rich and flavorful range
-            of high quality cheeses. Due to the growth of the domestic and international cheese markets, De Producent has become a modern and flexible company and is one of the larger suppliers of Dutch Farmhouse Cheese in Europe.</p> 
-            <p>Looking towards the
-            future and the expected domestic and international growth, the continued expansion of capacity is a must. De Producent is therefore working hard on constructing a brand new, ultra-modern cheese warehouse in Gouda. Click here for our news page
-            with the latest news about our new warehouse.</p>
     </div>
 </div>
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jWPDnBv_3gs" allowfullscreen></iframe>
+<div class="row producent-today-section">
+    <div class="col-sm-4">
+        <p>Over one hundred years later, De Producent still offers purchasing guarantees and stands for the responsible purchase of the cheese produced by its farmers. Within the Cooperative, De Producent has a large number of farmers who produce cheese
+            under the strict quality control of De Producent. As a result, De Producent can always supply a rich and flavorful range of high quality cheeses. Due to the growth of the domestic and international cheese markets, De Producent has become a
+            modern and flexible company and is one of the larger suppliers of Dutch Farmhouse Cheese in Europe.</p>
+        <p>Looking towards the future and the expected domestic and international growth, the continued expansion of capacity is a must. De Producent is therefore working hard on constructing a brand new, ultra-modern cheese warehouse in Gouda.</p>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9 col-sm-8">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jWPDnBv_3gs" allowfullscreen></iframe>
+    </div>
 </div>
 
 {% endblock %}
