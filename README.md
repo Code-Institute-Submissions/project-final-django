@@ -17,10 +17,11 @@ A live demo of the web app can be viewed clicking [this] link (sdv-the-cheese-fa
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
 #### URL's
 The url.py files direct the url's to specified views. All Django apps have their own url.py file. The central url.py in the 'webshop' directory imports all the urls from the apps through the include method. Importing all the urls from their respective apps creates order in the project. 
---
-'''python
+
+```python
 from products import urls as products_urls
-'''-- 
---'''python
+```
+
+```python
 path('products/', include(products_urls))
-'''--
+```
