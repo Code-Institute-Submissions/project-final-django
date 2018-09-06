@@ -23,5 +23,16 @@ from products import urls as products_urls
 ```
 
 ```python
-path('products/', include(products_urls))
+urlpatterns = [
+  path('products/', include(products_urls))
+]
+```
+
+#### Views
+the url.py files usually direct to a certain view in the views.py files. The views are python functions that determine how the website works. Most importantly, a view renders a specific html template. Another important task is making queries to the database. For example, the view that allows users to see their order history makes a query to the database: 
+
+```python
+def show_order_history(request):
+    orders = Order.objects.all().filter(profile = request.user.profile).order_by('-date')
+    return render(request, "accounts/orderhistory.html", {'orders': orders})
 ```
