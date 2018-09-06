@@ -18,16 +18,16 @@ This web app is built in Django, a Python based framework for building web appli
 
 #### Apps
 The project contains five django apps. All apps have their own specific function. This section briefly explains what the app does for the user. After this section there will be more explanation on the files inside the apps. 
-##### Products
+###### Products
 The products app displays all the products in the webshop and allows the user to narrow down their search for a product. Users can also see more details of a specified product and can add products to the cart. 
-##### Cart
+###### Cart
 The cart shows all products that are ready for checkout. It displays them in a table with their respective information on for example queantity and price. Also, a total price is calculated and users can remove items from the cart. 
-##### Checkout
+###### Checkout
 The checkout allows users to fill in their shipping and billing information. It also shows a summary of the products they are going to buy. All information, except for the payment details, are prefilled through using the profiles of the users (later more on this). 
-##### Accounts
+###### Accounts
 The accounts app allows people to register. Users that are already registered and visit the site are allowed to login. If people forgot their password they can request a new password. A link will be sent to the emailaddress they fill in. Clicking on this link brings them to a page where they can enter a new password and redirects them back to the website. 
 The account app also allows users to view their complete order history selected on date starting with the most recent order. 
-##### Home
+###### Home
 The Home app contains the home page, the about-us page and the contact page. On the contact page people can fill in a form that sents an email to the company containing their comment. The contact page also embeds google maps with the company's address pinned down. 
 
 #### URL's
