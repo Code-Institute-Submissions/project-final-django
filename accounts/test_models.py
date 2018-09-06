@@ -12,3 +12,11 @@ class TestProfileModel(TestCase):
         self.assertEqual(item.first_name, "test")
         self.assertFalse(item.newsletter_subscription)
         
+    def test_newsletter_subscription_set_to_True(self):
+        user_profile = User(username="stein", password="asdlfj")
+        user_profile.save()
+        item = Profile(user=user_profile, first_name="test", last_name="test", email="test@example.com", phone_number="0324", country="nl", postcode="342", city="test", street_address1="test", street_address2="test", newsletter_subscription=True)
+        item.save()
+        self.assertEqual(item.first_name, "test")
+        self.assertTrue(item.newsletter_subscription)
+        
