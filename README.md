@@ -1,7 +1,7 @@
 # project-final-django
 This is an ecommerce website built for a **fictional** cheese company. It is built in the Django framework and uses Stripe as a payment system. The web app allows users to register, add products (cheeses) to their shopping cart, checkout the shopping cart,  and, see their complete order history.  
 
-## Live demo
+#### Live demo
 A live demo of the web app can be viewed clicking this link: https://sdv-the-cheese-factory.herokuapp.com/
 
 ## Built with
@@ -10,8 +10,26 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 3. HTML5
 4. CSS3
 5. JavaScript
-6. SQLite
-7. Bootstrap 
+6. JQuery
+7. SQLite
+8. Bootstrap 
+9. Stripe (payment API)
+10. SendGrid (email API)
+
+## Features
+* Products list - allows users to get an overview of the cheese that is sold by De Producent. They can also make selections. 
+* Shopping cart - allows users to get an overview of the cheese they are going to buy and possibly delete some. 
+* Checkout - overview of the order and the shipping/payment details. 
+* Contact form - allows users to send an email to the company. 
+* Profile page- allows users to view their complete order history and change their profile details. 
+
+###### Features left to implement: 
+* Blog where farmers will share their experiences (for this reason people are asked to upload a profile image when they register) 
+
+## UX 
+This web application is built for De Producent, a cooporation of cheese farmers out of the Netherlands that operates as a wholesale. Most of their customers are middleman. 
+The aim for this website was to allow for a quick order/checkout process. Most of the visitors of the website will be market vendors; frequent buyers that are familiar with the products of De Producent. Therefore, the shopping carts have an 'add to cart' so customers do not have to go to the 'more detail' page to order. Furthermore, when the customer wants to checkout the shopping cart, most of the form fields are prefilled. This will also contribute to a fast buying process. 
+Again, the assumption is that most of the customers will be frequent buyers. Therefore customers can also see their complete order history on their profile page. They will see how much they have spent, but also what cheese they have bought. 
 
 ## Getting Started
 This project can be cloned and modified for your own purposes. The following instructions will help you in setting up the project on your own system. 
