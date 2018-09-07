@@ -13,6 +13,14 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 6. SQLite
 7. Bootstrap 
 
+## Getting Started
+This project can be cloned and modified for your own purposes. The following instructions will help you in setting up the project on your own system. 
+
+#### Installing
+This is an installation guide for Mac/Linux systems. Windows commands might be slightly different. 
+1. Clone the project to your local machine ```git clone git@github.com:steindevos/project-final-django.git```
+2. 
+
 ## Django components
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
 
