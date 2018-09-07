@@ -37,10 +37,21 @@ export EMAIL_HOST_PASSWORD='yourPassword'
 ```
 * Create your own [secret_key]. 
 * Set up a Stripe account [here] in order to create your own Stripe keys.
-* Django comes with the SQLite database. When you run your project for the first time you first have to create the database tables with the following command ```python python3 managage.py migrate```. 
+* Django comes with the SQLite database. When you run your project for the first time you first have to create the database tables with the following command ```python3 managage.py migrate```. 
+* In order to run the project in your browser type ```python3 manage.py run``` in the terminal. In your browser visit ```127.0.0.1:8000``` and there you should see the web application.
+* In order to populate the database, first create a superuser ```python3 managage.py createsuperuser```. Now you can login in the admin panel ```127.0.0.1:8000/admin```. In the admin panel you can create your own products and manage the accounts, orders and profiles.
 
 [secret_key]: https://www.miniwebtool.com/django-secret-key-generator/
 [here]: https://stripe.com/gb
+
+#### Running tests
+Important parts of the web application are tested through automated unit tests. The tests are created with TestCase, which is part of the Django framework. 
+The tests can be found inside the test_.py files inside the app directories. In order to run the tests type ```python3 manage.py test``` in the command line. 
+
+#### Deployment
+This web app is deployed on [Heroku] and uses its Postgres database. The media files are stored in an Amazon s3 bucket. 
+
+[Heroku]: https://www.heroku.com/
 
 ## Django components
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
@@ -130,8 +141,12 @@ class Order(models.Model):
 
 One thing must be noted by the above code snippet. Both the Order and the Profile model contain columns that store the same information, for example street_address and phone_number. This is done purposively in order to store the user information as it was at the time of ordering. When there exists only a one to one relationship with the Profile table, then instances of an Order would change when a user changes his or her profile. This could lead to situations that should be avoided. As an example see the way the price is stored in the Order model. Changing the price of cheese would now lead to changes in the price in the order history. In order to fix this bug the price as it was at the time of ordering must be stored. 
 
-
-
 ## Authors
+This web app is created by Stein de Vos. 
 
-## Acknowledgements 
+## Acknowledgements
+For the styling the bootswatch [Litera theme] is used.
+
+[Litera theme]: https://bootswatch.com/litera/
+
+Also, this web app could have never been build without the guidance of the teachers of the Code Institute. In particular Matt, Brian, Richard and Katie. Thanks for your teachings! 
