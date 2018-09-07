@@ -147,6 +147,10 @@ This web app is created by Stein de Vos.
 ## Acknowledgements
 For the styling the bootswatch [Litera theme] is used.
 
+Many of the content comes from the [actual] website of the Producent. 
+
+[actual]: http://deproducent2017.nl/ 
+
 [Litera theme]: https://bootswatch.com/litera/
 
 Also, this web app could have never been build without the guidance of the teachers of the Code Institute. In particular Matt, Brian, Richard and Katie. Thanks for your teachings! 
