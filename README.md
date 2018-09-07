@@ -35,7 +35,9 @@ export STRIPE_SECRET_KEY=''
 export EMAIL_HOST_USER='your@gmail.com'    
 export EMAIL_HOST_PASSWORD='yourPassword'
 ```
-..* Create your own [secret_key]: https://www.miniwebtool.com/django-secret-key-generator/
+* Create your own [secret_key]
+
+[secret_key]: https://www.miniwebtool.com/django-secret-key-generator/
 ## Django components
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
 
