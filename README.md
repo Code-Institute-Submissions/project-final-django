@@ -16,11 +16,26 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 ## Getting Started
 This project can be cloned and modified for your own purposes. The following instructions will help you in setting up the project on your own system. 
 
+## Prerequisites
+Make sure you have python installed on your machine. Not sure if you have python installed? Type ```python --version``` in your terminal. 
+
 #### Installing
 This is an installation guide for Mac/Linux systems. Windows commands might be slightly different. 
 1. Clone the project to your local machine ```git clone git@github.com:steindevos/project-final-django.git```
-2. 
+2. Create and activate a virtual environment. create: ```$ python3 -m venv ~/virtualenvs/<name_of_environment>``` and activate: ```$ source ~/virtualenvs/<name_of_environment>/bin/activate```. 
+3. This project uses third party libraries. Install all through pip installing the requirements.txt file. ```pip3 install -r requirements.txt```. 
+4. Set up your environment variables in an env.sh file at the top level of the project. Make sure to include this file to the .gitignore file. 
+```python
+export SECRET_KEY=''
+export DEBUG='True'
 
+export STRIPE_PUBLISHABLE_KEY=''
+export STRIPE_SECRET_KEY=''
+
+export EMAIL_HOST_USER='your@gmail.com'    
+export EMAIL_HOST_PASSWORD='yourPassword'
+```
+..* Create your own [secret_key]: https://www.miniwebtool.com/django-secret-key-generator/
 ## Django components
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
 
