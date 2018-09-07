@@ -35,9 +35,13 @@ export STRIPE_SECRET_KEY=''
 export EMAIL_HOST_USER='your@gmail.com'    
 export EMAIL_HOST_PASSWORD='yourPassword'
 ```
-* Create your own [secret_key]
+* Create your own [secret_key]. 
+* Set up a Stripe account [here] in order to create your own Stripe keys.
+* Django comes with the SQLite database. When you run your project for the first time you first have to create the database tables with the following command ```python python3 managage.py migrate```. 
 
 [secret_key]: https://www.miniwebtool.com/django-secret-key-generator/
+[here]: https://stripe.com/gb
+
 ## Django components
 This web app is built in Django, a Python based framework for building web applications. This section briefly explains how this framework is applied in the project. 
 
