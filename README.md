@@ -16,7 +16,7 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 ## Getting Started
 This project can be cloned and modified for your own purposes. The following instructions will help you in setting up the project on your own system. 
 
-## Prerequisites
+#### Prerequisites
 Make sure you have python installed on your machine. Not sure if you have python installed? Type ```python --version``` in your terminal. 
 
 #### Installing
