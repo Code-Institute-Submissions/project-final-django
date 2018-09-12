@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-10 col-sm-12">
 
-
+        {% if orders %}
         <div class="accordion" id="accordionExample">
             {% for order in orders%}
             <div class="card">
@@ -67,7 +67,9 @@
             </div>
             {% endfor %}
         </div>
-
+        {% else %}
+        <h5>No orders to display</h5>
+        {% endif %}
     </div>
 
 </div>

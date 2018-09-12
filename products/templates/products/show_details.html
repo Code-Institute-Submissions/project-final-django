@@ -44,7 +44,7 @@
 
             <div class="row">
                 <form action="{% url 'add_to_cart' %}" method="post">
-                    <input type="number" class="form-control add-to-cart-input-field" name='quantity' placeholder="quantity" id="inputDefault"> {% csrf_token %}
+                    <input type="number" class="form-control add-to-cart-input-field" min="0" name='quantity' placeholder="quantity" id="inputDefault"> {% csrf_token %}
                     <input type="hidden" name="id" value="{{product.id}}" />
 
                     <select class="custom-select add-to-cart-kg-input" name="weight">
