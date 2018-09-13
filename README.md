@@ -1,5 +1,7 @@
 # project-final-django
-This is an ecommerce website built for a **fictional** cheese company. It is built in the Django framework and uses Stripe as a payment system. The web app allows users to register, add products (cheeses) to their shopping cart, checkout the shopping cart,  and, see their complete order history.  
+This is an ecommerce website built for a **fictional** cheese company. It is built in the Django framework and uses Stripe as a payment system. The web app allows users to register, add products to their shopping cart and checkout the shopping cart.
+
+An import feature of this web application is that customers of the company can - if they are logged in - view their complete order history. This is helpful, because most of the customers are middleman who buy frequently from the company.  
 
 #### Live demo
 A live demo of the web app can be viewed clicking this link: https://sdv-the-cheese-factory.herokuapp.com/
@@ -18,7 +20,7 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 
 ## Features
 * Products list - allows users to get an overview of the cheese that is sold by De Producent. They can also make selections. 
-* Shopping cart - allows users to get an overview of the cheese they are going to buy and possibly delete some. 
+* Shopping cart - allows users to get an overview of the cheese they are going to buy. They also have the option to delete some. 
 * Checkout - overview of the order and the shipping/payment details. 
 * Contact form - allows users to send an email to the company. 
 * Profile page- allows users to view their complete order history and change their profile details. 
@@ -28,7 +30,9 @@ A live demo of the web app can be viewed clicking this link: https://sdv-the-che
 
 ## UX 
 This web application is built for De Producent, a cooporation of cheese farmers out of the Netherlands that operates as a wholesale. Most of their customers are middleman. 
+
 The aim for this website was to allow for a quick order/checkout process. Most of the visitors of the website will be market vendors; frequent buyers that are familiar with the products of De Producent. Therefore, the shopping carts have an 'add to cart' so customers do not have to go to the 'more detail' page to order. Furthermore, when the customer wants to checkout the shopping cart, most of the form fields are prefilled. This will also contribute to a fast buying process. 
+
 Again, the assumption is that most of the customers will be frequent buyers. Therefore customers can also see their complete order history on their profile page. They will see how much they have spent, but also what cheese they have bought. 
 
 ## Getting Started
@@ -165,7 +169,7 @@ This web app is created by Stein de Vos.
 ## Acknowledgements
 For the styling the bootswatch [Litera theme] is used.
 
-Many of the content comes from the [actual] website of the Producent. 
+Much of the content comes from the [actual] website of the Producent. 
 
 [actual]: http://deproducent2017.nl/ 
 

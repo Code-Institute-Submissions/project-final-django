@@ -67,7 +67,8 @@ def confirm_checkout(request):
             del request.session['cart']
             return redirect("show_home")
         else:
-            return HttpResponse("Charge Not Paid")
+            messages.error(request, "Unfortunately there was an ERROR Charging this Credit Card, please try again")
+            return redirect('show_checkout')
     
     else:
         print(order_form.errors)
