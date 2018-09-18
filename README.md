@@ -68,7 +68,12 @@ export EMAIL_HOST_PASSWORD='yourPassword'
 
 #### Running tests
 Important parts of the web application are tested through automated unit tests. The tests are created with TestCase, which is part of the Django framework. 
-The tests can be found inside the test_.py files inside the app directories. In order to run the tests type ```python3 manage.py test``` in the command line. 
+The tests can be found inside the test_.py files inside the app directories. In order to run the tests type ```python3 manage.py test``` in the command line.
+
+It is also important to perform some functional tests. Try to create a new user and add some products to your cart. Test the checkout by filling in the following dummy credit card details 
+```Card card number: 4242424242424242```
+```Security code: 100```
+
 
 #### Deployment
 This web app is deployed on [Heroku] and uses its Postgres database. The media files are stored in an Amazon s3 bucket. 
